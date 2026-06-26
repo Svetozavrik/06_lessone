@@ -29,6 +29,7 @@ def test_session_storage_auth():
 
     user2_url = driver.current_url
 
-    assert user1_url != user2_url
-
+    assert "user/1" in user1_url
+    assert "user/2" in user2_url
+    
     driver.quit()
